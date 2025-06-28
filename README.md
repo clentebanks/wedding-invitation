@@ -53,7 +53,7 @@ For questions or support, please contact:
 
 **Clent Ebanks**  
 [Templario](https://www.templario.shop)  
-Email: support@templario.com
+Email: clentebanks0@mail.com
 
 Thank you for your purchase! We wish you a beautiful wedding celebration.
 
