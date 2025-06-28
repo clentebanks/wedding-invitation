@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elegant Wedding Invitation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f9f7f5;
+            color: #333;
+        }
+        .cursive {
+            font-family: 'Playfair Display', serif;
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.2), transparent);
+        }
+        .floral-divider {
+            position: relative;
+            height: 20px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 10" preserveAspectRatio="none"><path d="M0,5 Q25,10 50,5 T100,5" fill="none" stroke="%23d4a76a" stroke-width="0.5"/></svg>') repeat-x center;
+            background-size: 100px 10px;
+            margin: 20px 0;
+        }
+        .save-the-date {
+            border: 1px solid #d4a76a;
+            transform: rotate(-5deg);
+        }
+        .countdown-box {
+            background: rgba(255,255,255,0.8);
+            border: 1px solid rgba(212,167,106,0.3);
+        }
+        .map-container {
+            height: 300px;
+            background-color: #eee;
+        }
+        .rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+            background-color: rgba(255,255,255,0.8);
+            border: 1px solid rgba(212,167,106,0.3);
+        }
+        .gallery-img {
+            transition: all 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .modal-backdrop {
+            background-color: rgba(0,0,0,0.7);
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    <!-- Language Toggle -->
+    <div class="position-absolute top-4 right-4 z-10">
+        <button id="languageToggle" class="bg-amber-700 text-white px-4 py-2 rounded-full font-medium shadow-lg hover:bg-amber-600 transition-colors">ES</button>
+    </div>
+
+<!-- Hero Section -->
+<section class="hero position-relative overflow-hidden" style="height: 100vh; min-height: 600px;">
+    <div class="position-absolute w-full h-full bg-black opacity-40"></div>
+    <div class="position-absolute w-full h-full bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');"></div>
+
+    <div class="container position-relative h-full flex items-center justify-center text-center text-amber-700">
+        <div class="py-12 px-4 md:px-8">
+            <h4 class="text-xl md:text-2xl font-light tracking-widest mb-2" data-en="WE'RE GETTING MARRIED" data-es="¡NOS CASAMOS!">WE'RE GETTING MARRIED</h4>
+            <h1 class="cursive text-5xl md:text-7xl lg:text-8xl font-bold mb-6">Sarah & Michael</h1>
+            <div class="divider w-32 mx-auto my-6"></div>
+            <h3 class="text-2xl md:text-3xl font-light mb-8" data-en="June 14, 2025" data-es="14 de junio de 2025">June 14, 2025</h3>
+            <a href="#rsvp" class="btn btn-amber-700 bg-amber-700 text-white px-8 py-3 rounded-pill text-uppercase letter-spacing-2" data-en="RSVP" data-es="CONFIRMAR ASISTENCIA">RSVP</a>
+        </div>
+    </div>
+
+    <div class="position-absolute bottom-0 left-0 right-0 text-center mb-8">
+        <a href="#our-story" class="text-amber-700 text-4xl animate-bounce inline-block">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
+</section>
+
+
+<!-- Save the Date -->
+<section class="py-12 bg-amber-50">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6 text-center">
+                <div class="save-the-date p-8 bg-white shadow-lg inline-block">
+                    <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Save The Date" data-es="Reserva la Fecha">Save The Date</h2>
+                    <p class="text-lg mb-4" data-en="Saturday, June 14th 2025" data-es="Sábado, 14 de junio de 2025">Saturday, June 14th 2025</p>
+                    <div class="floral-divider"></div>
+                    <p class="text-2xl cursive text-amber-700 mb-4">Sarah & Michael</p>
+                    <p class="mb-4" data-en="We invite you to celebrate our love" data-es="Te invitamos a celebrar nuestro amor">We invite you to celebrate our love</p>
+                    <p data-en="St. Mary's Cathedral, New York" data-es="Catedral St. Mary's, Nueva York">St. Mary's Cathedral, New York</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Our Story -->
+  <section id="our-story" class="py-16 bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Our Story" data-es="Nuestra Historia">Our Story</h2>
+                <div class="divider w-24 mx-auto"></div>
+            </div>
+        </div>
+        
+        <div class="row align-items-center mb-8">
+            <div class="col-md-6 order-md-1 order-2">
+                <div class="p-6">
+                    <h3 class="text-2xl cursive text-amber-700 mb-4" data-en="The First Meeting" data-es="El Primer Encuentro">The First Meeting</h3>
+                    <p class="mb-4"
+                       data-en="It was a rainy afternoon in Central Park when Sarah's umbrella turned inside out. Michael, passing by, offered his own. Their eyes met, and in that moment, something magical began."
+                       data-es="Fue una tarde lluviosa en Central Park cuando el paraguas de Sarah se dio vuelta. Michael, que pasaba por allí, le ofreció el suyo. Sus miradas se encontraron, y en ese momento, algo mágico comenzó.">
+                       It was a rainy afternoon in Central Park when Sarah's umbrella turned inside out. Michael, passing by, offered his own. Their eyes met, and in that moment, something magical began.
+                    </p>
+                    <p>October 12, 2018</p>
+                </div>
+            </div>
+            <div class="col-md-6 order-md-2 order-1 mb-4 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Pareja en el parque" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+        </div>
+        
+        <div class="row align-items-center mb-8">
+            <div class="col-md-6 mb-4 md:mb-0">
+                <img src="https://images.unsplash.com/photo-1518621736915-f3b1c41bfd00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" alt="Propuesta de matrimonio" class="w-full h-auto rounded-lg shadow-md">
+            </div>
+            <div class="col-md-6">
+                <div class="p-6">
+                    <h3 class="text-2xl cursive text-amber-700 mb-4" data-en="The Proposal" data-es="La Propuesta">The Proposal</h3>
+                    <p class="mb-4"
+                       data-en="On a secluded beach at sunset, Michael got down on one knee. Sarah said yes before he could even finish the question. The waves crashed as they embraced, beginning their journey toward forever."
+                       data-es="En una playa apartada al atardecer, Michael se arrodilló. Sarah dijo que sí antes de que él pudiera siquiera terminar la pregunta. Las olas rompieron mientras se abrazaban, comenzando su camino hacia siempre.">
+                       On a secluded beach at sunset, Michael got down on one knee. Sarah said yes before he could even finish the question. The waves crashed as they embraced, beginning their journey toward forever.
+                    </p>
+                    <p>July 4, 2023</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+   <!-- Countdown -->
+<section class="py-16 bg-amber-100">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Counting the Days" data-es="Contando los Días">Counting the Days</h2>
+                <div class="divider w-24 mx-auto"></div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10 col-lg-8">
+                <div class="grid grid-cols-4 gap-4 text-center">
+                    <div class="countdown-box p-4 rounded-lg">
+                        <div class="text-4xl font-bold" id="countdown-days">00</div>
+                        <div class="text-sm uppercase" data-en="Days" data-es="Días">Days</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg">
+                        <div class="text-4xl font-bold" id="countdown-hours">00</div>
+                        <div class="text-sm uppercase" data-en="Hours" data-es="Horas">Hours</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg">
+                        <div class="text-4xl font-bold" id="countdown-minutes">00</div>
+                        <div class="text-sm uppercase" data-en="Minutes" data-es="Minutos">Minutes</div>
+                    </div>
+                    <div class="countdown-box p-4 rounded-lg">
+                        <div class="text-4xl font-bold" id="countdown-seconds">00</div>
+                        <div class="text-sm uppercase" data-en="Seconds" data-es="Segundos">Seconds</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Wedding Details -->
+    <section class="py-16 bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Wedding Details" data-es="Detalles de la Boda">Wedding Details</h2>
+                <div class="divider w-24 mx-auto"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-6 mb-8 md:mb-0">
+                <div class="text-center p-6">
+                    <div class="text-5xl text-amber-700 mb-4">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <h3 class="text-2xl cursive mb-4" data-en="Ceremony" data-es="Ceremonia">Ceremony</h3>
+                    <p class="mb-2" data-en="St. Mary's Cathedral" data-es="Catedral de Santa María">St. Mary's Cathedral</p>
+                    <p class="mb-2" data-en="123 Cathedral Way, New York" data-es="123 Calle Catedral, Nueva York">123 Cathedral Way, New York</p>
+                    <p class="mb-4" data-en="3:00 PM" data-es="3:00 PM">3:00 PM</p>
+                    <a href="#" class="text-amber-700 hover:underline"
+                       data-bs-toggle="modal" data-bs-target="#mapModal"
+                       data-location="St. Mary's Cathedral, New York"
+                       data-en="View on map" data-es="Ver en el mapa">View on map</a>
+                </div>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="text-center p-6">
+                    <div class="text-5xl text-amber-700 mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-2xl cursive mb-4" data-en="Reception" data-es="Recepción">Reception</h3>
+                    <p class="mb-2" data-en="The Grand Ballroom" data-es="El Gran Salón">The Grand Ballroom</p>
+                    <p class="mb-2" data-en="456 Park Avenue, New York" data-es="456 Avenida Park, Nueva York">456 Park Avenue, New York</p>
+                    <p class="mb-4" data-en="6:00 PM" data-es="6:00 PM">6:00 PM</p>
+                    <a href="#" class="text-amber-700 hover:underline"
+                       data-bs-toggle="modal" data-bs-target="#mapModal"
+                       data-location="The Grand Ballroom, New York"
+                       data-en="View on map" data-es="Ver en el mapa">View on map</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Gallery -->
+   <section class="py-16 bg-amber-50">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Our Gallery" data-es="Nuestra Galería">Our Gallery</h2>
+                <div class="divider w-24 mx-auto"></div>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                     alt="Couple" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1523438885200-e635ba2c371e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                     alt="Engagement" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                     alt="Together" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1529626455594-4ff0732a5620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                     alt="Romantic" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1529626455594-4ff0732a5620?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1529333164857-4f877a0f4f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" 
+                     alt="Love" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1529333164857-4f877a0f4f92?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80">
+            </div>
+            <div class="col-md-4 mb-4">
+                <img src="https://images.unsplash.com/photo-1529254476481-12113e7ab0e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80" 
+                     alt="Kiss" 
+                     class="w-full h-auto rounded-lg shadow-md gallery-img cursor-pointer" 
+                     data-bs-toggle="modal" 
+                     data-bs-target="#galleryModal" 
+                     data-img="https://images.unsplash.com/photo-1529254476481-12113e7ab0e7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80">
+            </div>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- RSVP -->
+<section id="rsvp" class="py-16 bg-white">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="RSVP" data-es="Confirmación">RSVP</h2>
+                <div class="divider w-24 mx-auto"></div>
+                <p class="mt-4" data-en="Kindly respond by May 1st, 2025" data-es="Por favor responde antes del 1 de mayo de 2025">Kindly respond by May 1st, 2025</p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-8 col-lg-6">
+                <form class="rsvp-form p-8 bg-amber-50 rounded-lg shadow-sm">
+                    <div class="mb-4">
+                        <label for="name" class="form-label" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="form-label" data-en="Email" data-es="Correo Electrónico">Email</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-4">
+                        <label for="guests" class="form-label" data-en="Number of Guests" data-es="Número de Invitados">Number of Guests</label>
+                        <select class="form-select" id="guests">
+                            <option value="1">1</option>
+                            <option value="2" selected>2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label class="form-label" data-en="Will you attend?" data-es="¿Asistirás?">Will you attend?</label>
+                        <div class="d-flex gap-4">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="attendance" id="attendYes" value="yes" checked>
+                                <label class="form-check-label" for="attendYes" data-en="Yes, I'll be there" data-es="Sí, asistiré">Yes, I'll be there</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="attendance" id="attendNo" value="no">
+                                <label class="form-check-label" for="attendNo" data-en="Regretfully decline" data-es="Lamentablemente no asistiré">Regretfully decline</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label for="message" class="form-label" data-en="Message for the couple" data-es="Mensaje para la pareja">Message for the couple</label>
+                        <textarea class="form-control" id="message" rows="3"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-amber-700 bg-amber-700 text-white px-8 py-3 rounded-pill" data-en="Submit RSVP" data-es="Enviar confirmación">Submit RSVP</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Gifts -->
+<section class="py-16 bg-amber-100">
+    <div class="container">
+        <div class="row justify-content-center mb-12">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-4xl text-amber-700 mb-4" data-en="Gift Registry" data-es="Mesa de Regalos">Gift Registry</h2>
+                <div class="divider w-24 mx-auto"></div>
+                <p class="mt-4" data-en="Your presence is present enough, but if you wish to give a gift, here are some options" data-es="Tu presencia es el mejor regalo, pero si deseas obsequiarnos algo, aquí tienes algunas opciones">
+                    Your presence is present enough, but if you wish to give a gift, here are some options
+                </p>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center p-6 bg-white rounded-lg shadow-sm h-full">
+                            <div class="text-4xl text-amber-700 mb-4">
+                                <i class="fas fa-utensils"></i>
+                            </div>
+                            <h3 class="text-xl cursive mb-4" data-en="Kitchen" data-es="Cocina">Kitchen</h3>
+                            <a href="#" class="text-amber-700 hover:underline" data-en="View Registry" data-es="Ver Lista">View Registry</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center p-6 bg-white rounded-lg shadow-sm h-full">
+                            <div class="text-4xl text-amber-700 mb-4">
+                                <i class="fas fa-home"></i>
+                            </div>
+                            <h3 class="text-xl cursive mb-4" data-en="Home" data-es="Hogar">Home</h3>
+                            <a href="#" class="text-amber-700 hover:underline" data-en="View Registry" data-es="Ver Lista">View Registry</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-4">
+                        <div class="text-center p-6 bg-white rounded-lg shadow-sm h-full">
+                            <div class="text-4xl text-amber-700 mb-4">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3 class="text-xl cursive mb-4" data-en="Honeymoon" data-es="Luna de Miel">Honeymoon</h3>
+                            <a href="#" class="text-amber-700 hover:underline" data-en="Contribute" data-es="Contribuir">Contribute</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Footer -->
+<footer class="py-12 bg-amber-900 text-white">
+    <div class="container">
+        <div class="row justify-content-center mb-8">
+            <div class="col-md-8 text-center">
+                <h2 class="cursive text-3xl mb-6">Sarah & Michael</h2>
+                <div class="divider w-32 mx-auto bg-white opacity-20 my-4"></div>
+                <p class="mb-6">June 14, 2025</p>
+                <div class="flex justify-center gap-4 mb-6">
+                    <a href="#" class="text-white hover:text-amber-200 text-xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-white hover:text-amber-200 text-xl"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white hover:text-amber-200 text-xl"><i class="fab fa-pinterest-p"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 text-center">
+                <p class="text-sm opacity-70" data-en="© 2025 Clent Ebanks – Templario. Based on DeepSite by enzostvs" data-es="© 2025 Clent Ebanks – Templario. Basado en DeepSite por enzostvs">
+                    © 2025 Clent Ebanks – Templario. Based on DeepSite by enzostvs
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <!-- Map Modal -->
+    <div class="modal fade" id="mapModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mapModalLabel">Location</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="map-container" id="map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Modal -->
+    <div class="modal fade" id="galleryModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-transparent border-0">
+                <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-body p-0">
+                    <img src="" alt="" class="w-full rounded-lg" id="galleryModalImg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const weddingDate = new Date("June 14, 2025 15:00:00").getTime();
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            document.getElementById("countdown-days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("countdown-hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("countdown-minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("countdown-seconds").innerHTML = seconds.toString().padStart(2, '0');
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Gallery Modal
+        const galleryModal = document.getElementById('galleryModal');
+        if (galleryModal) {
+            galleryModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const imgSrc = button.getAttribute('data-img');
+                const modalImg = document.getElementById('galleryModalImg');
+                modalImg.src = imgSrc;
+            });
+        }
+        
+        // Map Modal
+        const mapModal = document.getElementById('mapModal');
+        if (mapModal) {
+            mapModal.addEventListener('show.bs.modal', function (event) {
+                const button = event.relatedTarget;
+                const location = button.getAttribute('data-location');
+                document.getElementById('mapModalLabel').textContent = location;
+                
+                // In a real implementation, you would initialize a map here
+                // For example: initMap(location);
+                document.getElementById('map').innerHTML = `
+                    <div class="h-full flex items-center justify-center bg-gray-200">
+                        <div class="text-center p-4">
+                            <i class="fas fa-map-marker-alt text-4xl text-amber-700 mb-2"></i>
+                            <p>Map would display here for:<br>${location}</p>
+                        </div>
+                    </div>
+                `;
+            });
+        }
+        
+        // RSVP Form Submission
+        const rsvpForm = document.querySelector('.rsvp-form');
+        if (rsvpForm) {
+            rsvpForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form values
+                const name = document.getElementById('name').value;
+                const attending = document.querySelector('input[name="attendance"]:checked').value;
+                
+                // Show alert
+                alert(`Thank you, ${name}! Your RSVP has been ${attending === 'yes' ? 'confirmed. We look forward to seeing you!' : 'received. We will miss you!'}`);
+                
+                // Reset form
+                this.reset();
+            });
+        }
+        // Language Toggle
+        const languageToggle = document.getElementById('languageToggle');
+        let currentLanguage = 'en';
+        
+        languageToggle.addEventListener('click', () => {
+            currentLanguage = currentLanguage === 'en' ? 'es' : 'en';
+            languageToggle.textContent = currentLanguage === 'en' ? 'ES' : 'EN';
+            
+            // Update all elements with data attributes
+            document.querySelectorAll('[data-en]').forEach(el => {
+                el.textContent = el.getAttribute(`data-${currentLanguage}`);
+            });
+            
+            // Update date format if needed
+            if (currentLanguage === 'es') {
+                document.querySelector('h3').textContent = '14 de Junio, 2025';
+            } else {
+                document.querySelector('h3').textContent = 'June 14, 2025';
+            }
+        });
+    </script>
+</body>
+</html>
